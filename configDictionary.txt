@@ -1,0 +1,21 @@
+**Header**
+
+This is the configuration dictionary, all notes go above the header end line
+
+
+
+Enter a list of config files to process in order, only one per line. CASE-SENSITIVE!
+
+
+
+*Header End*
+
+
+
+CTSIS_EXPORT_AD_USERS.txt
+
+ADSIQueue_IMPORT_TO_CTSIS.txt
+
+
+ASURE_ID_EXPORT.txt
+
