@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class LoadConfig {
@@ -10,9 +11,8 @@ public class LoadConfig {
 	{
 		
 		//Declare config variables
-		//ArrayList<String> conArray = new ArrayList<>();
 		String readHeader = "";
-				
+
 		// Reads specified file and skips header lines
 		Scanner config = new Scanner(new File(fileName));
 				
@@ -31,12 +31,12 @@ public class LoadConfig {
 				}
 		}
 		config.close();
-		System.out.println("Config loaded");
+
+
 	}
 	//returns array of config lines
 	public ArrayList<String> getConfig()
 	{
-		System.out.println("Return Config");
 		return configArray;
 	}
 
