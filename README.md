@@ -1,5 +1,5 @@
 # SQLCopy
-Copies data from one SQL source to another.
+Copies data from one SQL source to another and dumps text log file.
 
 Works with Oracle and MS SQL databases. MySQL should also work with correct drivers and JDBC string. 
 
@@ -9,7 +9,6 @@ Everything is read as string values and inserted as such, so it does not play we
 
 Future feature releases (in no particular order):
 
--Logging to text file
 -Export to CSV on local filesystem as target
 -Export to CSV on remote SFTP target
 -Smarter handling of column types so dates, BLOBs, and other fields are supported
