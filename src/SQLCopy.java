@@ -1,14 +1,15 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class SQLCopy {
-	private static final String VERSION = "2.0";
+	private static final String VERSION = "2.1"; //also change in WriteToFile class
 	private static final String CONFIG_DICTIONARY = "configDictionary.txt";
 	private static LoadConfig loadConfig;
     private static ProcessConfig processConfig;
-	
+
 /*	
 	public SQLCopy() {
 	}
@@ -47,21 +48,22 @@ public class SQLCopy {
 		String fileNameInput = null;
 		ArrayList<String> configFileDictionary = new ArrayList<String>();
 		int configQueueSize = 0;
-		configFileDictionary = LoadConfigDictionary();
+		configFileDictionary = LoadConfigDictionary();		
 		
 		if(args.length >= 1){ //checks for CLI argument
 			fileNameInput = args[0];
-			loadConfig = new LoadConfig(fileNameInput);
-			processConfig = new ProcessConfig(loadConfig.getConfig());
+			processConfig = new ProcessConfig(fileNameInput);
 		}
 		else if(!configFileDictionary.isEmpty()) //processes non empty config dictionary
 		{
 			configQueueSize = configFileDictionary.size();
 			
 			for(int i = 0; i < configQueueSize; i++){
-				loadConfig = new LoadConfig(configFileDictionary.get(i));			
-				processConfig = new ProcessConfig(loadConfig.getConfig());
+				//loadConfig = new LoadConfig(configFileDictionary.get(i));			
+				processConfig = new ProcessConfig(configFileDictionary.get(i));
 			}
 		}
+		
+		System.out.println("SQLCopy Task Finished");
 	}
 }
