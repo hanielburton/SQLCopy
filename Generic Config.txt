@@ -1,0 +1,31 @@
+**Header**************
+*All notes go above the header end line
+*
+*Enter connection strings as follows, they MUST be in the SAME order:
+*
+*
+*Line1: jdbc:oracle:thin:USERNAME/PASSWORD@SOURCE_DATABSE_HOST:1521:SID (connection string for source database)
+*
+*Line2: SOURCE_TABLE_NAME (table or view data is being copied from. Number of columns, position, and data types must be identical to insert table)
+*
+*Line3: jdbc:oracle:thin:USERNAME/PASSWORD@TARGET_DATABSE_HOST:1521:SID (connection string for destination database
+*
+*Line4: TARGET_TABLE_NAME (target table)
+*
+*Line5: y (y to delete existing data before insert, n to append data)
+*Line6: verbose to print out exact rows and data to log file, otherwise quiet 
+*
+*Description: 
+*
+*Header End*
+
+
+
+jdbc:oracle:thin:USERNAME/PASSWORD@SOURCE_DATABSE_HOST:1521:SID
+SOURCE_TABLE_NAME
+jdbc:sqlserver://DATABASE_HOST:1433;database=DATABASE;user=USERNAME;password=PASSWORD;
+TARGET_TABLE_NAME
+y
+verbose
+
+
